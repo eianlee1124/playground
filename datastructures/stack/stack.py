@@ -1,7 +1,10 @@
 class Stack(object):
 
     def __init__(self):
-        self.data = [] 
+        self.data = []
+
+    def __repr__(self):
+        return "Stack(%s)" % self.data
 
     def is_empty(self):
         return len(self.data) == 0
@@ -11,7 +14,8 @@ class Stack(object):
 
     def pop(self, index=-1):
         value = self.data[index]
-        del value
+        del self.data[index]
+        return value
 
     def peek(self):
         return self.data[0]
@@ -19,5 +23,3 @@ class Stack(object):
     def size(self):
         return len(self.data)
         
-
-
