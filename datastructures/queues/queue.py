@@ -26,8 +26,7 @@ class Queue(object):
             pos += 1
 
     def __repr__(self):
-        return "Queue([%s])" % self.stack
-            
+        return "Queue([%s])" % self.stack[:self.size]
 
     def is_empty(self):
         return self.size == 0

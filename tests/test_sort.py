@@ -1,7 +1,6 @@
 from algorithms.sort import *
 import unittest
 
-import _collections_abc
 
 class TestSuite(unittest.TestCase):
 
@@ -11,5 +10,5 @@ class TestSuite(unittest.TestCase):
         
 
 
-if __name__ == "algorithms":
+if __name__ == "__main__":
     unittest.main()

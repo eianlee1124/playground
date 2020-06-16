@@ -33,11 +33,11 @@ class SinglyLinkedList(object):
             node = node.next
 
     def __repr__(self):
-        node = self.head
-        items = []
-        while node is not None:
-            items.append(str(node))
-            node = node.next
-        items.append("None")
-        return " -> ".join(items)
+        curr = self.head
+        nodes = []
+        while curr is not None:
+            nodes.append(str(curr))
+            curr = curr.next
+        nodes.append("None")
+        return " -> ".join(nodes)
 
