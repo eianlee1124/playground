@@ -8,6 +8,8 @@ class Node(object):
     def __repr__(self):
         return "Node(%s)" % self.data
 
+    __str__ = __repr__
+
 
 class LinkedList(object):
 
