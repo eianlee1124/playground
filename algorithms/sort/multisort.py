@@ -22,5 +22,4 @@ if __name__ == "__main__":
         Student('jane', 'B', 12),
         Student('dave', 'B', 10),
     ]
-
-    print(multisort(list(students), (('grade', True), ('age', False))))
+    print(multisort(students, (('grade', True), ('age', False))))
