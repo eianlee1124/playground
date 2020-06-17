@@ -41,3 +41,58 @@ class SinglyLinkedList(object):
         nodes.append("None")
         return " -> ".join(nodes)
 
+    def append(self, new_node):
+        new_node = Node(new_node)
+        if self.head is None:
+            self.head = new_node
+            return
+        for current_node in self:
+            pass
+        current_node.next = new_node
+
+    def appendleft(self, new_node):
+        curr = Node(new_node)
+        curr.next = self.head
+        self.head = curr
+
+    def insert_next(self, target, new_node):
+        if self.head is None:
+            raise IndexError("Insert from empty list")
+
+        new_node = Node(new_node) 
+        for curr in self:
+            if curr.data is target:
+                new_node.next = curr.next
+                curr.next = new_node
+                return
+        raise IndexError(f"Node {target} not found")
+
+    def insert_prev(self, target, new_node):
+        if self.head is None:
+            raise IndexError("Insert from empty list")
+        if self.head.data is target:
+            self.appendleft(Node(new_node))
+        
+        prev = self.head
+        new_node = Node(new_node)
+        for curr in self:
+            if curr.data is target:
+                prev.next = new_node
+                new_node.next = curr
+                return
+            prev = curr
+        raise IndexError(f"Node {target} not found")
+
+    def remove(self, target):
+        if self.head is None:
+            raise ValueError(f"{target} not in list")
+        if self.head.data is target:
+            self.head = self.head.next
+            return
+        prev = self.head
+        for curr in self:
+            if curr.data is target:
+                prev.next = curr.next
+                return
+            prev = curr
+        raise ValueError(f"{target} not in list")
