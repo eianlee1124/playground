@@ -34,7 +34,7 @@ sortedcontainers==2.2.2
 SpeechRecognition==3.8.1
 typing==3.7.4.1
 typing-extensions==3.7.4.2
-urllib3==1.25.9
+urllib3==1.26.5
 websockets==8.1
 Werkzeug==1.0.1
 yapic.json==1.5.1
